@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-card">
+            <div class="card-header">
+                <h2>Comprar productos</h2>
+                <button type="button" class="info-button">
+                    <i class="bi bi-info-circle"></i>
+                </button>
+            </div>
+            
+            <div class="purchase-type">
+                <div class="purchase-option active" data-type="partial">Compra parcial</div>
+                <div class="purchase-option" data-type="complete">Lote completo</div>
+            </div>
+            
+            <!-- Seção de Compra Parcial -->
+            <div class="purchase-content partial-content active">
+                <div class="quantity-section">
+                    <p class="section-title">Seleccionar Cantidad de Cajas</p>
+                    <div class="quantity-options">
+                        <button class="quantity-btn active" data-quantity="1">
+                            <i class="bi bi-box"></i> 1 caja
+                        </button>
+                        <button class="quantity-btn" data-quantity="2">
+                            <i class="bi bi-box"></i> 2 cajas
+                        </button>
+                        <button class="quantity-btn" data-quantity="3">
+                            <i class="bi bi-box"></i> 3 cajas
+                        </button>
+                    </div>
+                    <p class="price-info">Precio total: <span class="price">149,99 €</span></p>
+                </div>
+                
+                <div class="preference-section">
+                    <p class="section-title">Indica tu preferencia (opcional)</p>
+                    <p class="section-description">Haremos lo posible por enviarte el producto de tu preferencia, pero los artículos se seleccionan aleatoriamente del lote.</p>
+                    
+                    <div class="product-options">
+                        <div class="product-item">
+                            <input type="radio" name="product" id="iphone" value="iphone">
+                            <label for="iphone" class="product-label">
+                                <div class="product-image">
+                                    <img src="https://accu-tech.pro/wp-content/uploads/2025/05/chanel-logo-editorial-illustration-free-vector.jpg" alt="Chanel">
+                                </div>
+                                <div class="product-info">
+                                    <h4>Chanel </h4>
+                                    <p>24 disponibles de 85 unidades</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="radio" name="product" id="samsung" value="samsung">
+                            <label for="samsung" class="product-label">
+                                <div class="product-image">
+                                    <img src="https://accu-tech.pro/wp-content/uploads/2025/05/logo-dior-1024.png" alt="Samsung Galaxy S22">
+                                </div>
+                                <div class="product-info">
+                                    <h4>Dior </h4>
+                                    <p>12 disponibles de 75 unidades</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="radio" name="product" id="ipad" value="ipad">
+                            <label for="ipad" class="product-label">
+                                <div class="product-image">
+                                    <img src="https://accu-tech.pro/wp-content/uploads/2025/05/carolina-herrera-logo-0.png" alt="iPad Mini">
+                                </div>
+                                <div class="product-info">
+                                    <h4>Carolina Herrera</h4>
+                                    <p>15 disponibles de 45 unidades</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="product-item">
+                            <input type="radio" name="product" id="airpods" value="airpods" checked>
+                            <label for="airpods" class="product-label">
+                                <div class="product-image">
+                                    <img src="https://accu-tech.pro/wp-content/uploads/2025/05/paco-rabanne-1-logo-png-transparent.png" alt="AirPods Pro">
+                                </div>
+                                <div class="product-info">
+                                    <h4>Paco Rabanne</h4>
+                                    <p>28 disponibles de 45 unidades</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Container onde o shortcode será renderizado -->
+<div id="checkout-button-container" class="purchase-button partial-button">
+    <!-- Shortcode aparecerá aqui via JS -->
+</div>
+
+            
+            <!-- Seção de Lote Completo -->
+            <div class="purchase-content complete-content">
+                <div class="complete-lot-section">
+                    <div class="complete-lot-header">
+                        <h3>Lote completo</h3>
+                        <span class="best-value-badge">Mejor valor</span>
+                    </div>
+                    
+                    <p class="complete-lot-description">Adquiere el lote completo con 57 unidades a un precio especial.</p>
+                    
+                    <div class="complete-lot-price-section">
+                        <div class="complete-lot-price">5129,43 €</div>
+                        <div class="complete-lot-unit-price">89,99 € por unidad</div>
+                    </div>
+                    
+                    <div class="complete-lot-savings">
+                        Ahorra aproximadamente un 12% comprando el lote completo en comparación con compras individuales.
+                    </div>
+                </div>
+                
+                <button class="purchase-button complete-button">
+                    <i class="bi bi-credit-card"></i> Comprar lote completo - Pago Contra Reembolso
+                </button>
+            </div>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <i class="bi bi-check-circle"></i> Stock disponible
+                </div>
+                <div class="benefit-item">
+                    <i class="bi bi-check-circle"></i> Garantía de 30 días
+                </div>
+                <div class="benefit-item">
+                    <i class="bi bi-check-circle"></i> Envío gratis
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
