@@ -13,21 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const basePrice = 149.99;
     
     // Função para atualizar preço e texto do botão
-function updatePriceAndButton(quantity) {
+function updatePriceDisplay(quantity) {
     const totalPrice = (basePrice * quantity).toFixed(2);
     priceElement.textContent = totalPrice.replace('.', ',') + ' €';
-
-    const boxText = quantity === 1 ? 'caja' : 'cajas';
-
-    purchaseButton.innerHTML = `
-        <div class="purchase-button-content">
-            <i class="bi bi-credit-card"></i>
-            <div class="purchase-button-text">
-                <b>Comprar ${quantity} ${boxText}</b>
-                <span>Pago Contra Reembolso</span>
-            </div>
-        </div>
-    `;
 }
 
 // Mapeia produto -> shortcode
@@ -58,7 +46,7 @@ function updateCheckoutButton(productValue) {
             
             // Atualizar preço e texto do botão
             const quantity = parseInt(this.dataset.quantity);
-            updatePriceAndButton(quantity);
+            updatePriceDisplay(quantity);
         });
     });
     
